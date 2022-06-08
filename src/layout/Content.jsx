@@ -1,10 +1,13 @@
 import React from "react";
+import {Routes, Route} from 'react-router-dom'
+import Movies from "./Movies";
 
 const Content= props => {
     return (
-        <>
-            <p>Content</p>
-        </>
+    <Routes>
+        <Route path="/" element={<Movies />} />
+        <Route path="/:category" element={<Movies />} />
+    </Routes>
     )
 }
 
